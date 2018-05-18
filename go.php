@@ -1,4 +1,9 @@
 <?php
+/*
+* Code is unfinished
+* Please do not download this, while in beta form.
+* Feel free to contribute
+*/
 
 // Source Interface Config
 $source_interface = $_POST['source_interface'];
@@ -15,7 +20,7 @@ $dest_tag = $_POST['dest_tag'];
 
 if(isset($_POST['submit']) && !empty($_POST['submit'])) {
   // if (!logged_in()) 
-  echo 'asodj';
+  echo 'works';
 }
 
 ?>
