@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta content="en-gb" http-equiv="Content-Language">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>VLAN tagging</title>
+</head>
+
+<body>
+
+<form method="post" action="go.php">
+	<fieldset name="vlan_tag" style="height: 420px; width: 400px;">
+	<legend>VLAN Tagging</legend>
+	<br>
+	<fieldset name="source" style="height: 128px; width: 361px">
+	<legend style="width: 110px">Source Interface</legend>
+	<table style="width: 100%; z-index: 1; height: 108px; position: static; top: 93px; left: 14px;">
+		<tr>
+			<td style="width: 179px">Interface Name:</td>
+			<td><select name="source_interface" style="width: 167px">
+			<option value="eth0">eth0</option>
+			<option value="eth1">eth1</option>
+			</select>&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="width: 179px">Is VLAN Interface:</td>
+			<td><input name="source_vlan" type="checkbox" value="yes">&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="width: 179px">802.1q Tag:</td>
+			<td>
+			<input name="source_tag_num" type="number" style="width: 162px" value="0"></td>
+		</tr>
+		<tr>
+			<td style="width: 179px">Tagged Interface:</td>
+			<td>Yes 
+			<input name="source_tag" type="radio" value="yes" checked="true">&nbsp; No<input name="source_tag" type="radio" value="no"></td>
+		</tr>
+		</table>
+	</fieldset><br><br>
+	
+	<fieldset name="destination" style="height: 130px; width: 359px">
+	<legend style="width: 135px">Destination Interface</legend>
+	<table style="width: 100%; position: static;">
+		<tr>
+			<td style="width: 179px">Interface Name:</td>
+			<td><select name="dest_interface" style="width: 167px">
+			<option value="eth0">eth0</option>
+			<option value="eth1" selected="">eth1</option>
+			</select>&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="width: 179px">Is VLAN Interface:</td>
+			<td><input name="dest_vlan" type="checkbox" value="yes">&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="width: 179px; height: 26px;">802.1q Tag:</td>
+			<td style="height: 26px">
+			<input name="dest_tag_num" type="number" style="width: 162px" value="0"></td>
+		</tr>
+		<tr>
+			<td style="width: 179px">Tagged Interface:</td>
+			<td>Yes 
+			<input name="dest_tag" type="radio" value="yes" checked="true">&nbsp; No<input name="dest_tag" type="radio" value="no"></td>
+		</tr>
+		</table>
+		
+	</fieldset><br>
+	<table style="width: 100%; position: static">
+		<tr>
+			<td style="width: 140px">&nbsp;</td>
+			<td style="width: 120px; text-align: center;">
+			<input name="Submit" type="submit" value="Submit">
+			<input name="Reset" type="reset" value="Reset">&nbsp;</td>
+			<td style="width: 140px">&nbsp;</td>
+		</tr>
+	</table>
+	</fieldset><br></form>
+
+</body>
+
+</html>
